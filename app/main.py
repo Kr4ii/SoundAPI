@@ -1,4 +1,3 @@
-
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from app.api.api import router as api_router
