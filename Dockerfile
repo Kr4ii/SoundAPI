@@ -1,10 +1,14 @@
-FROM python:3.9-slim
+FROM python:3.9
 
 WORKDIR /app
 
 # Install system dependencies
 RUN apt-get update && \
-    apt-get install -y ffmpeg libsndfile1 && \
+    apt-get install -y \
+    ffmpeg \
+    libsndfile1 \
+    gcc \
+    python3-dev && \
     apt-get clean
 
 COPY requirements.txt .

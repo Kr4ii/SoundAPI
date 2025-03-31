@@ -33,7 +33,6 @@
     <Folder Include="app\logs\" />
     <Folder Include="app\src\" />
     <Folder Include="data\" />
-    <Folder Include="data\input\" />
     <Folder Include="data\temp\" />
     <Folder Include="data\output\" />
   </ItemGroup>
@@ -46,6 +45,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Readme.md">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="requirements.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
