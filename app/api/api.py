@@ -4,7 +4,7 @@ import os
 import uuid
 import logging
 import aiofiles
-from app.src.audio_processing import (
+from src.audio_processing import (
     reduce_noise,
     apply_bandpass_filter,
     normalize_volume

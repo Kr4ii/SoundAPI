@@ -11,15 +11,13 @@ RUN apt-get update && \
     python3-dev && \
     apt-get clean
 
-COPY requirements.txt .
-
-# Install Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
-
 COPY ./app /app
 
-# Create work directory
-RUN mkdir -p /data/temp /data/output /app/logs
+ENV PYTHONPATH=/app
+
+COPY requirements.txt .
+
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Command to start
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]

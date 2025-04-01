@@ -38,8 +38,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="app\api\api.py" />
+    <Compile Include="app\api\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="app\main.py" />
     <Compile Include="app\src\audio_processing.py" />
+    <Compile Include="app\src\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Dockerfile">
       <SubType>Code</SubType>
     </Compile>
