@@ -13,6 +13,8 @@ RUN apt-get update && \
 
 COPY ./app /app
 
+COPY ./data /data
+
 ENV PYTHONPATH=/app
 
 COPY requirements.txt .

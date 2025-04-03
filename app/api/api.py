@@ -25,8 +25,8 @@ async def handle_audio_processing(file: UploadFile, processing_func, **kwargs):
 
         # Create directories
         unique_id = uuid.uuid4().hex
-        temp_dir = "data/temp"
-        output_dir = "data/output"
+        temp_dir = "../data/temp"
+        output_dir = "../data/output"
         os.makedirs(temp_dir, exist_ok=True)
         os.makedirs(output_dir, exist_ok=True)
 

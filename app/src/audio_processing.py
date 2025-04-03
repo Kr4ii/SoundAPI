@@ -20,7 +20,7 @@ def load_audio(input_path: str):
 
 # Save audio
 def save_audio(data: np.ndarray, sr: int, output_path: str):
-    temp_path = "data/temp/temp_processed.wav"
+    temp_path = "../data/temp/temp_processed.wav"
     sf.write(temp_path, data, sr)
     audio = AudioSegment.from_wav(temp_path)
     audio.export(output_path, format="wav")
@@ -56,7 +56,7 @@ def apply_bandpass_filter(input_path: str, output_path: str, lowcut=300, highcut
 # Volume normalization
 def normalize_volume(input_path: str, output_path: str, target_dBFS=-20.0):
     data, sr = load_audio(input_path)
-    temp_path = "data/temp/temp_normalize.wav"
+    temp_path = "../data/temp/temp_normalize.wav"
     sf.write(temp_path, data, sr)
     
     audio = AudioSegment.from_wav(temp_path)
