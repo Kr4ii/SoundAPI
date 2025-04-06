@@ -12,7 +12,7 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
     handlers=[
-        logging.FileHandler("logs/app.log"),
+        logging.FileHandler("./app/logs/app.log"),
         logging.StreamHandler()
     ]
 )
@@ -21,7 +21,8 @@ logging.basicConfig(
 app.include_router(api_router, prefix="/api/v1")
 
 # Prepare dirs
-app.mount("/output", StaticFiles(directory="../data/output"), name="output")
+app.mount("/data", StaticFiles(directory="./data"), name="data")
+app.mount("/output", StaticFiles(directory="./data/output"), name="output")
 
 # Entry point
 if __name__ == "__main__":

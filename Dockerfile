@@ -1,6 +1,6 @@
 FROM python:3.9
 
-WORKDIR /app
+WORKDIR ./
 
 # Install system dependencies
 RUN apt-get update && \
@@ -13,7 +13,7 @@ RUN apt-get update && \
 
 COPY ./app /app
 
-COPY ./data /data
+RUN mkdir -p data/temp data/output app/logs
 
 ENV PYTHONPATH=/app
 

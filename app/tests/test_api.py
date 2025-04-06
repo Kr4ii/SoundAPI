@@ -3,7 +3,7 @@ def test_invalid_file_format():
     response = client.post("/api/v1/process-audio/", 
         files={"file": ("test.txt", b"invalid", "text/plain")})
     assert response.status_code == 400
-    assert "Формат файла не поддерживается" in response.json()["detail"]
+    assert "Unsupported file format" in response.json()["detail"]
 
 # Check audio processing
 def test_valid_audio_processing():

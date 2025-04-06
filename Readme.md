@@ -26,8 +26,7 @@ project/
 ## Требования
 
 - Docker 20.10+
-- Python 3.9+ (для локального запуска)
-- 2 GB свободной памяти
+- Python 3.9+ 
 
 ## Установка и запуск
 
@@ -49,7 +48,7 @@ pip install -r requirements.txt
 ```
 2. Создайте необходимые директории:
 ```bash
-mkdir -p app/temp app/output app/logs
+mkdir -p data/temp data/output app/logs
 ```
 3. Запустите сервер:
 ```bash
